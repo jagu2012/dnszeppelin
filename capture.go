@@ -153,8 +153,10 @@ func (capturer *DNSCapturer) Start() {
 		select {
 		case packet := <-packetSource.Packets():
 			if packet == nil {
-				log.Println("PacketSource returned nil, exiting (Possible end of pcap file?). Sleeping for 10 seconds waiting for processing to finish")
-				time.Sleep(time.Second * 10)
+				//log.Println("PacketSource returned nil, exiting (Possible end of pcap file?). Sleeping for 10 seconds waiting for processing to finish")
+				//time.Sleep(time.Second * 10)
+				log.Println("PacketSource returned nil, exiting (Possible end of pcap file?)")
+				
 				close(options.Done)
 				return
 			}
