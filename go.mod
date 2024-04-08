@@ -1,4 +1,4 @@
-module github.com/niclabs/dnszeppelin
+module github.com/jagu2012/dnszeppelin
 
 go 1.15
 
